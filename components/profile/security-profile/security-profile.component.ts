@@ -6,7 +6,7 @@ import {
   FormControl,
   AbstractControl,
 } from '@angular/forms';
-import { AppModalService } from '../../../../modules/wms-shared/services/app-modal.service';
+import { AppModalService } from '../../../../wms-fe-modules/shared/services/app-modal.service';
 import { ProfileService } from '../../../services/profile.service';
 import { AuthService } from '../../../services/auth.service';
 import { PasswordReset } from '../../../model/password-reset';

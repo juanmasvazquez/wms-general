@@ -1,10 +1,10 @@
 import { Component, OnInit, Renderer2, OnDestroy } from '@angular/core';
 import { FormBuilder, Validators, AbstractControl } from '@angular/forms';
-import { AppModalService } from '../../../modules/wms-shared/services/app-modal.service';
+import { AppModalService } from '../../../wms-fe-modules/shared/services/app-modal.service';
 import { AuthService } from '../../services/auth.service';
 import { BsModalRef } from 'ngx-bootstrap';
-import { ErrorResponse } from '../../../modules/wms-commons/model/error-response';
-import { AppErrorHandlerService } from '../../../modules/wms-commons/services/app-error-handler.service';
+import { ErrorResponse } from '../../../wms-fe-modules/commons/model/error-response';
+import { AppErrorHandlerService } from '../../../wms-fe-modules/commons/services/app-error-handler.service';
 import { Router } from '@angular/router';
 
 @Component({

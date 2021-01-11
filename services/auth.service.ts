@@ -11,7 +11,7 @@ import { AppAuthorities } from '../../wms-config/model/app-authorities';
 import {
   EventTopic,
   NotificationTopic,
-} from '../../modules/wms-commons/model/event-info';
+} from '../../wms-fe-modules/commons/model/event-info';
 
 export const USER_STATUS_RESET = 'RESET';
 export const ERR_ACCESS_DENIED_ERROR = 'ERR_ACCESS_DENIED_ERROR';

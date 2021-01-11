@@ -6,8 +6,8 @@ import {
   FormControl,
 } from '@angular/forms';
 import { ProfileService } from '../../../services/profile.service';
-import { AppModalService } from '../../../../modules/wms-shared/services/app-modal.service';
-import { AppErrorHandlerService } from '../../../../modules/wms-commons/services/app-error-handler.service';
+import { AppModalService } from '../../../../wms-fe-modules/shared/services/app-modal.service';
+import { AppErrorHandlerService } from '../../../../wms-fe-modules/commons/services/app-error-handler.service';
 import { AuthService } from '../../../services/auth.service';
 import { Profile } from '../../../model/profile';
 import { UserNotification } from '../../../model/user-notification';
