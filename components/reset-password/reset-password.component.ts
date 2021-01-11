@@ -3,8 +3,8 @@ import { FormBuilder, Validators, AbstractControl } from '@angular/forms';
 import { AppModalService } from '../../../modules/wms-shared/services/app-modal.service';
 import { AuthService } from '../../services/auth.service';
 import { BsModalRef } from 'ngx-bootstrap';
-import { ErrorResponse } from '../../../modules/commons/model/error-response';
-import { AppErrorHandlerService } from '../../../modules/commons/services/app-error-handler.service';
+import { ErrorResponse } from '../../../modules/wms-commons/model/error-response';
+import { AppErrorHandlerService } from '../../../modules/wms-commons/services/app-error-handler.service';
 import { Router } from '@angular/router';
 
 @Component({

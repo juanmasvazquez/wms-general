@@ -7,7 +7,7 @@ import {
 } from '@angular/forms';
 import { ProfileService } from '../../../services/profile.service';
 import { AppModalService } from '../../../../modules/wms-shared/services/app-modal.service';
-import { AppErrorHandlerService } from '../../../../modules/commons/services/app-error-handler.service';
+import { AppErrorHandlerService } from '../../../../modules/wms-commons/services/app-error-handler.service';
 import { AuthService } from '../../../services/auth.service';
 import { Profile } from '../../../model/profile';
 import { UserNotification } from '../../../model/user-notification';
