@@ -1,0 +1,103 @@
+<!-- CONTENT
+    ================================================== -->
+
+<div class="row align-items-center justify-content-center">
+  <div class="col-12 col-md-5 col-lg-6 col-xl-4 px-lg-6 my-5 text-center">
+    <div class="avatar-custom mb-3">
+      <img src="assets/img/logo-lg.png" alt="..." class="avatar-img-lg" />
+    </div>
+
+    <!-- Heading -->
+    <h1 class="display-4 text-center mb-3">Ingreso</h1>
+
+    <!-- Form -->
+    <form [formGroup]="loginForm" class="text-left">
+      <div class="form-group">
+        <!-- Label -->
+        <label class="col-form-label col-form-label-sm mb-1"> Usuario </label>
+
+        <input
+          type="text"
+          formControlName="username"
+          class="form-control"
+          tabindex="1"
+          placeholder="Ingrese su usuario"
+        />
+      </div>
+
+      <!-- Password -->
+      <div class="form-group">
+        <div class="row">
+          <div class="col">
+            <!-- Label -->
+            <label class="col-form-label col-form-label-sm mb-1"
+              >Contraseña</label
+            >
+          </div>
+          <div class="col-auto">
+            <!-- Help text -->
+            <a
+              [routerLink]="['/update_password']"
+              class="form-text small text-muted"
+            >
+              ¿Olvidó su contraseña?
+            </a>
+          </div>
+        </div>
+        <!-- / .row -->
+
+        <!-- Input group -->
+        <div class="input-group input-group-merge">
+          <!-- Input -->
+          <input
+            type="password"
+            class="form-control form-control-appended"
+            formControlName="password"
+            tabindex="2"
+            placeholder="Ingrese su contraseña"
+          />
+
+          <!-- Icon -->
+          <div class="input-group-append">
+            <span class="input-group-text">
+              <i class="fe fe-eye"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Submit -->
+      <div
+        *ngIf="errorMsg"
+        class="text-center"
+        style="
+          width: 100%;
+          margin-top: 0.25rem;
+          font-size: 0.8125rem;
+          font-weight: 500;
+          padding-bottom: 1%;
+          color: #e63757;
+        "
+        [innerHTML]="errorMsg"
+      ></div>
+      <button
+        class="btn btn-lg btn-block btn-primary mb-3"
+        (click)="login()"
+        tabindex="3"
+      >
+        Ingresar
+      </button>
+    </form>
+  </div>
+  <div class="col-12 col-md-7 col-lg-6 col-xl-8 d-none d-lg-block">
+    <!-- Image -->
+    <div
+      class="bg-cover vh-100 mt-n1 mr-n3"
+      style="
+        background-image: url(assets/img/covers/bg-login.jpg);
+        margin-right: -12px !important;
+      "
+    ></div>
+  </div>
+</div>
+<!-- / .row -->

@@ -1,0 +1,155 @@
+<!-- Form -->
+<div class="card-body text-center text-secondary" *ngIf="isLoading">
+  <div class="spinner-border" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>
+<ng-container *ngIf="!isLoading">
+  <form [formGroup]="generalProfileForm" novalidate>
+    <div class="row mt-5">
+      <div class="col-12 col-md-6">
+        <div class="row align-items-center">
+          <div class="col-auto">
+            <!-- Avatar -->
+            <div class="avatar">
+              <span
+                _ngcontent-jhs-c0=""
+                class="avatar-title bg-primary rounded-circle"
+                >{{ initials }}</span
+              >
+            </div>
+          </div>
+          <div class="col ml-n2 mt-3">
+            <div class="form-group">
+              <!-- Label -->
+              <label class="col-form-label col-form-label-sm"> Usuario </label>
+
+              <label class="form-text">{{ username?.value }}</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="my-4" />
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <!-- First name -->
+        <div
+          class="form-group"
+          [ngClass]="{
+            'has-danger': hasToDisplayError(name)
+          }"
+        >
+          <!-- Label -->
+          <label class="col-form-label col-form-label-sm"> Nombre </label>
+
+          <!-- Input -->
+          <input
+            type="text"
+            formControlName="name"
+            class="form-control"
+            [ngClass]="{
+              'is-invalid': hasToDisplayError(name)
+            }"
+          />
+          <ng-container *ngIf="hasToDisplayError(name)">
+            <div *ngIf="name.errors.required" class="invalid-feedback">
+              <div>* Requerido</div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <!-- Last name -->
+        <div
+          class="form-group"
+          [ngClass]="{
+            'has-danger': hasToDisplayError(lastname)
+          }"
+        >
+          <!-- Label -->
+          <label class="col-form-label col-form-label-sm"> Apellido </label>
+
+          <!-- Input -->
+          <input
+            type="text"
+            formControlName="lastname"
+            class="form-control"
+            [ngClass]="{
+              'is-invalid': hasToDisplayError(lastname)
+            }"
+          />
+          <ng-container *ngIf="hasToDisplayError(lastname)">
+            <div *ngIf="lastname.errors.required" class="invalid-feedback">
+              <div>* Requerido</div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <!-- Last name -->
+        <div
+          class="form-group"
+          [ngClass]="{
+            'has-danger': hasToDisplayError(docNumber)
+          }"
+        >
+          <!-- Label -->
+          <label class="col-form-label col-form-label-sm"> DNI </label>
+
+          <!-- Input -->
+          <input
+            type="text"
+            formControlName="docNumber"
+            class="form-control"
+            [ngClass]="{
+              'is-invalid': hasToDisplayError(docNumber)
+            }"
+          />
+          <ng-container *ngIf="hasToDisplayError(docNumber)">
+            <div *ngIf="docNumber.errors.required" class="invalid-feedback">
+              <div>* Requerido</div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <!-- Email address -->
+        <div
+          class="form-group"
+          [ngClass]="{
+            'has-danger': hasToDisplayError(email)
+          }"
+        >
+          <!-- Label -->
+          <label class="col-form-label col-form-label-sm mb-1"> Email </label>
+          <!-- Input -->
+          <input
+            type="text"
+            formControlName="email"
+            class="form-control"
+            [ngClass]="{
+              'is-invalid': hasToDisplayError(email)
+            }"
+          />
+          <ng-container *ngIf="hasToDisplayError(email)">
+            <div *ngIf="email.errors.required" class="invalid-feedback">
+              <div>* Requerido</div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+    <!-- / .row -->
+  </form>
+</ng-container>
+<loading-button
+  text="Guardar Cambios"
+  buttonType="btn"
+  extraCssClass="btn-sm"
+  buttonColorType="primary"
+  [isProcessing]="isProcessing"
+  (clickEvent)="saveGeneral()"
+></loading-button>

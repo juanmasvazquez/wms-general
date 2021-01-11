@@ -1,0 +1,12 @@
+.avatar-img-lg {
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.avatar-custom {
+  position: relative;
+  display: inline-block;
+  height: 3rem;
+  font-size: 1rem;
+}
