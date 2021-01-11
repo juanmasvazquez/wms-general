@@ -1,6 +1,6 @@
 import { Component, OnInit, Renderer2, OnDestroy } from '@angular/core';
 import { FormBuilder, Validators, AbstractControl } from '@angular/forms';
-import { AppModalService } from '../../../modules/shared/services/app-modal.service';
+import { AppModalService } from '../../../modules/wms-shared/services/app-modal.service';
 import { AuthService } from '../../services/auth.service';
 import { BsModalRef } from 'ngx-bootstrap';
 import { ErrorResponse } from '../../../modules/commons/model/error-response';
